@@ -43,9 +43,9 @@
 <br />
 
   <img src="https://github-readme-stats.vercel.app/api?username=
-Hasnain01-hub&count_private=true&show_icons=true height="170px">
+Hasnain01-hub&count_private=true&show_icons=true&theme=radical" height="170px">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=
-Hasnain01-hub&layout=compact height="170px">
+Hasnain01-hub&layout=compact&theme=radical" height="170px">
 
 
 <br/>
