@@ -90,3 +90,54 @@ button:hover
     z-index: 999;
     transition: background 1s ease;
 }
+
+
+@media only screen and (max-width: 414px){
+
+.button {
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px var(--roboto);
+    position: relative;
+    margin-left: 63px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+.pt-5, .py-5 {
+    padding-top: 3rem!important;
+    text-align: center;
+}
+.title-h1{
+    font: normal bold 39px/ 40px var(--roboto);
+    text-align: center;
+}
+.site-main .project-area .button-group button + button {
+    padding-left: 1rem;
+}
+.align-ite{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+}
+@media only screen and (max-width: 375px){
+   .align-ite{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+   .button {
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px var(--roboto);
+    position: relative;
+    margin-left: 55px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+   .pt-5, .py-5 {
+    padding-top: 3rem!important;
+
+}
+    }
