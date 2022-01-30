@@ -29,8 +29,63 @@
 
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="responsive.css">
-   
-</head>
+    </head>
+<style> 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  
+  top: 0;
+  max-width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  
+  
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close1 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
 
 <body id="home1">
     <!-- <div class="loading">
@@ -607,19 +662,17 @@
             <div class="container carousel py-lg-5">
                 <div class="owl-carousel owl-theme">
                     <div class="client row">
-                        <!-- <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid">
-                        </div> -->
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img id="myBtn" src="./unsiript_certificate.png" alt="img1" class="img-fluid">
+                        </div>
                         <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Diploma in Computer Eng</h4>
-                            <p class="para">- Vidyalankar Polytechnic, Wadala
-                                
-                                Aggregate Percentage - 95.03%</p>
+                            <h4 class="text-uppercase">Unscript 2k22 Hackaton</h4>
+                            <p class="para">National level Hackaton conducted by Fr Conceicao Rodrigues College. Grabbed 1st Prize in open code Innovation.</p>
                         </div>
                     </div>
                     <div class="client row">
                         <div class="col-lg-4 col-md-12 client-img">
-                            <img src="Certificate.png" alt="img2" class="img-fluid">
+                            <img  src="Certificate.png" alt="img2" class="img-fluid">
                         </div>
                         <div class="col-lg-8 col-md-12 about-client">
                             <h4 class="text-uppercase">E-Portfolio Event
@@ -641,11 +694,11 @@
                     </div>
                     <div class="client row">
                         <div class="col-lg-4 col-md-12 client-img">
-                            <img src="coursera1.png" alt="img2" class="img-fluid">
+                            <img id="myBtn1" src="IncubateInd-Certificate.png" alt="img2" class="img-fluid">
                         </div>
                         <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Getting Started With Python</h4>
-                            <p class="para">This course aims to teach everyone the basics of programming computers using Python. We cover the basics of how one constructs a program using Python .</p>
+                            <h4 class="text-uppercase">Code Innovation series Hackaton</h4>
+                            <p class="para">The hackaton was powered by Github and IncubateIND at Vidyalankar Institute of Tech. Grabbed 1st runner up position.</p>
                         </div>
                     </div>
                     <div class="client row">
@@ -669,7 +722,29 @@
                     </div> -->
                 </div>
             </div>
+            <div id="myModal" class="modal">
 
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div  style="max-width: 70%; margin-left: auto;margin-right: auto;">
+                    <img id="myBtn" src="./unsiript_certificate.png" alt="img1" class="img-fluid" >
+                </div>
+                </div>
+              
+              </div>
+              <div id="myModal1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close1">&times;</span>
+                  <div  style="max-width: 70%; margin-left: auto;margin-right: auto;">
+                    <img id="myBtn1" src="./IncubateInd-Certificate.png" alt="img1" class="img-fluid" >
+                </div>
+                </div>
+              
+              </div>
+              
         </section>
 
         <!--  ======================== End About Me Area ==============================  -->
@@ -738,6 +813,39 @@ $(".loading").fadeOut(3000);
 });
 function goToURL() {
 window.location = "Resume1.png";
+}
+var modal = document.getElementById("myModal");
+var modal1 = document.getElementById("myModal1");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close1")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
 }
 </script>
 
