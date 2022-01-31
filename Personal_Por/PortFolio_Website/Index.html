@@ -85,6 +85,20 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 </style>
 
 <body id="home1">
@@ -191,10 +205,23 @@
                                 Moreover, I am a Computer Eng student, playing with frameworks, learning new langauges and exploring more in this feild . 
                             </p>
                         </div>
-                        <button type="button" onclick="goToURL()" class="btn button primary-button text-uppercase">View cv</button>
+                        <button type="button" 
+                        id="myBtn2"
+                         class="btn button primary-button text-uppercase">View cv</button>
                     </div>
                 </div>
             </div>
+            <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close2">&times;</span>
+                  <div  style="max-width: 70%; margin-left: auto;margin-right: auto;">
+                    <img id="myBtn2" src="./Resume1.png" alt="img1" class="img-fluid" >
+                </div>
+                </div>
+              
+              </div>
         </section>
 
         <!--  ========================= End About Area ==========================  -->
@@ -797,7 +824,11 @@
                 <div class="copyrights text-center">
                     <p class="para">
                          ©2021| Made with<img id="img12" src="logo-remove.png"> by
-                        <a href="https://hasnain-codelab.netlify.app/"><span style="color: var(--primary-color);">CodeLab</span></a>
+                        <!-- <a href="https://hasnain-codelab.netlify.app/"> -->
+                            <!-- <span style="color: var(--primary-color);"> -->
+                            <img src="./logo1.png" style="max-width: 20%; max-height: 44px;" alt="logo"/>
+                            <!-- </span> -->
+                        <!-- </a> -->
                     </p>
                 </div>
             </div>
@@ -816,12 +847,15 @@ window.location = "Resume1.png";
 }
 var modal = document.getElementById("myModal");
 var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var span1 = document.getElementsByClassName("close1")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -829,12 +863,18 @@ btn.onclick = function() {
 btn1.onclick = function() {
   modal1.style.display = "block";
 }
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 span1.onclick = function() {
   modal1.style.display = "none";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -845,6 +885,11 @@ window.onclick = function(event) {
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
   }
 }
 </script>
